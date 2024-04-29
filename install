@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+if [ "$EUID" -ne 0 ]; then
+    echo "error: you cannot perform this operation unless you are root."
+    exit 1
+fi
+
+fonts() {
+    directory="/usr/share/fonts/OpenSans"
+
+    if [ -d "${directory}" ]; then
+        echo "OpenSans fonts is likely already installed."
+        return 0
+    fi
+
+    mkdir -p "${directory}"
+    cp -r fonts/* "${directory}" || { echo "Error when copying files"; exit 1; }
+    rm -r "fonts"
+
+    echo "OpenSans fonts installed successfully!"
+}
+
+theme() {
+    directory="/usr/share/sddm/themes/LiberSDDM"
+
+    if [ -d "${directory}" ]; then
+        echo "LiberSDDM is likely already installed."
+        exit 1
+    fi
+
+    mkdir -p "${directory}"
+    cp -r * "${directory}" || { echo "Error when copying files"; exit 1; }
+    rm -r "${directory}/install"
+
+    echo "LiberSDDM installed successfully!"
+    exit 0
+}
+
+if fonts; then
+    theme
+fi

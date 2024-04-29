@@ -1,0 +1,15 @@
+[SddmGreeterTheme]
+Name=LiberSDDM
+Description=LiberSDDM
+Author=CelestifyX
+License=GPL-3.0-or-later
+Type=sddm-theme
+Version=1.0
+Website=https://github.com/CelestifyX/LiberSDDM
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Theme-Id=LiberSDDM
+Theme-API=2.0
+QtVersion=6
