@@ -5,12 +5,11 @@ This SDDM theme has a modern and elegant design that gives your login screen a s
 ## Installation
 
 1. Clone the repository
-
     ```bash
     git clone https://github.com/CelestifyX/LiberSDDM.git
     ```
 
-2. Navitate to the project directory:
+2. Navigate to the project directory:
     ```bash
     cd LiberSDDM
     ```
